@@ -42,7 +42,7 @@ class Queue {
 class FixedLengthQueue extends Queue { // 定长队列
   constructor(length) {
     super()
-    this._length = length
+    this._length = length + 1
   }
 
   _headNext(){
