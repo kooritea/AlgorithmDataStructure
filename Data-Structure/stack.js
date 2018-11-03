@@ -1,4 +1,4 @@
-class Stack {
+class SqStack {
   constructor() {
     this._head = 0
     this._Data = []
@@ -14,6 +14,14 @@ class Stack {
     return this._Data[this._head]
   }
 
+  getTop(){
+    return this._Data[this._head - 1]
+  }
+
+  getLength(){
+    return this._head
+  }
+
   getAllData(){
     let result = []
     for(let i = 0;i < this._head;i++){
@@ -23,5 +31,5 @@ class Stack {
   }
 }
 module.exports = {
-  Stack
+  SqStack
 }

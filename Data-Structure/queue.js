@@ -1,4 +1,4 @@
-class Queue {
+class SqQueue {
   constructor() {
     this._head = 0
     this._tail = 0
@@ -39,7 +39,7 @@ class Queue {
 }
 
 
-class FixedLengthQueue extends Queue { // 定长队列
+class FixedLengthSqQueue extends SqQueue { // 定长队列
   constructor(length) {
     super()
     this._length = length + 1
@@ -75,6 +75,6 @@ class FixedLengthQueue extends Queue { // 定长队列
 }
 
 module.exports = {
-  Queue,
-  FixedLengthQueue
+  SqQueue,
+  FixedLengthSqQueue
 }

@@ -1,29 +1,31 @@
-const {Queue,FixedLengthQueue} = require('./Data-Structure/queue.js')
-const {Stack} = require('./Data-Structure/stack.js')
+const {SqQueue,FixedLengthSqQueue} = require('./Data-Structure/queue.js')
+const {SqStack} = require('./Data-Structure/stack.js')
 
 //普通队列 先进先出
-const queue = new Queue()
+const sqQueue = new SqQueue()
 for(let i=0;i<5;i++){
-  queue.push(i)
-  console.log(`queue.push(${i}) => [${queue.getAllData()}]`)
-  console.log(`queue.pop() => ${ queue.pop()}`)
-  queue.push(i + 1 )
-  console.log(`queue.push(${i + 1}) => [${queue.getAllData()}]`)
+  sqQueue.push(i)
+  console.log(`sqQueue.push(${i}) => [${sqQueue.getAllData()}]`)
+  console.log(`sqQueue.pop() => ${ sqQueue.pop()}`)
+  sqQueue.push(i + 1 )
+  console.log(`sqQueue.push(${i + 1}) => [${sqQueue.getAllData()}]`)
 }
 
 // 定长队列 达到固定长度后自动把队尾丢出去
-const fixedLengthQueue = new FixedLengthQueue(5)
+const fixedLengthSqQueue = new FixedLengthSqQueue(5)
 for(let i=0;i<10;i++){
-  fixedLengthQueue.push(i)
-  console.log(`fixedLengthQueue.push(${i}) => ${fixedLengthQueue.getAllData()}`)
+  fixedLengthSqQueue.push(i)
+  console.log(`fixedLengthSqQueue.push(${i}) => ${fixedLengthSqQueue.getAllData()}`)
 }
 
-//普通栈 先进后出
-const stack = new Stack()
+//普通顺序栈 先进后出
+const sqStack = new SqStack()
 for(let i=0;i<5;i++){
-  stack.push(i)
-  console.log(`stack.push(${i}) => [${stack.getAllData()}]`)
-  console.log(`stack.pop() => ${ stack.pop()}`)
-  stack.push(i + i )
-  console.log(`stack.push(${i + i}) => [${stack.getAllData()}]`)
+  sqStack.push(i)
+  console.log(`sqStack.push(${i}) => [${sqStack.getAllData()}]`)
+  console.log(`sqStack.pop() => ${ sqStack.pop()}`)
+  sqStack.push(i + i )
+  console.log(`sqStack.push(${i + i}) => [${sqStack.getAllData()}]`)
+  console.log(`The top is ${sqStack.getTop()}`)
+  console.log(`The sqStack length is ${sqStack.getLength()}`)
 }
