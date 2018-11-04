@@ -8,6 +8,7 @@
 ```javascript
 const sqQueue = new sqQueue()
 ```
+
 ### 定长顺序队列
 
 > 达到固定长度后丢弃队尾
@@ -23,4 +24,13 @@ const fixedLengthSqQueue = new fixedLengthSqQueue(5)
 
 ```javascript
 const sqStack = new SqStack()
+```
+
+## 链表
+### 普通单链表
+
+> 顺序查找 随机存储
+
+```javascript
+const link = new Link()
 ```
