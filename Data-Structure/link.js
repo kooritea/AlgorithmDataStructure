@@ -42,6 +42,15 @@ class Link {
     }
     return cursor
   }
+  locateItem(item){
+    let cursor = this._head
+    let i=0
+    while(item !== cursor){
+      cursor = cursor.next
+      i++
+    }
+    return i
+  }
   getAllData(){
     let result = []
     let cursor = this._head
