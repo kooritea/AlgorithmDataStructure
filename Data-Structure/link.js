@@ -35,6 +35,13 @@ class Link {
       item.next.next = next
     }
   }
+  delete(offset){
+    let  priorNode= this._head
+    for(let i = 0;i < offset - 1;i++){
+      priorNode = priorNode.next
+    }
+    priorNode.next = priorNode.next.next
+  }
   getItem(offset){
     let cursor = this._head
     for(let i = 0;i < offset;i++){
