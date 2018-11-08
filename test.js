@@ -59,3 +59,11 @@ console.log(`AllData => ${link.getAllData()}`)
 link.delete(5)
 console.log(`delete 5 => ${link.getAllData()}`)
 console.log()
+
+//冒泡排序
+console.log('冒泡排序')
+const {bubbleSort} = require('./Algorithm/sort.js')
+let array = [2,5,3,2,1,4,5,6,4]
+console.log(`origin aray => [${array}]`)
+console.log(`排序结果 => [${bubbleSort(array)}]`)
+console.log()
