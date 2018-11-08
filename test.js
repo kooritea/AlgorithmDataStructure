@@ -63,7 +63,13 @@ console.log()
 //冒泡排序
 console.log('冒泡排序')
 const {bubbleSort} = require('./Algorithm/sort.js')
-let array = [2,5,3,2,1,4,5,6,4]
-console.log(`origin aray => [${array}]`)
-console.log(`排序结果 => [${bubbleSort(array)}]`)
+console.log(`origin aray => [${[2,5,3,2,1,4,5,6,4]}]`)
+console.log(`排序结果 => [${bubbleSort([2,5,3,2,1,4,5,6,4])}]`)
+console.log()
+
+//改进冒泡排序
+console.log('改进冒泡排序')
+const {optimizeBubbleSort} = require('./Algorithm/sort.js')
+console.log(`origin aray => [${[2,5,3,2,1,4,5,6,4]}]`)
+console.log(`排序结果 => [${optimizeBubbleSort([2,5,3,2,1,4,5,6,4])}]`)
 console.log()
