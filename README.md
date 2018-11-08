@@ -34,3 +34,20 @@ const sqStack = new SqStack()
 ```javascript
 const link = new Link()
 ```
+
+## 排序
+### 冒泡排序
+
+> 全扫描冒泡
+
+```javascript
+bubbleSort([2,5,3,2,1,4,5,6,4])
+```
+
+### 改进冒泡排序
+
+> 记录了最后一次排序位置，下一趟排序只遍历到上一次记录的位置
+
+```javascript
+optimizeBubbleSort([2,5,3,2,1,4,5,6,4])
+```
