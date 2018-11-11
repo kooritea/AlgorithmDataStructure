@@ -58,6 +58,22 @@ class Link {
     }
     return i
   }
+  priorItem(item){
+    let cursor = this._head
+    if(cursor === item){
+      throw 'Is Head'
+    }
+    for(let i = 0;i < this.length;i++){
+      if(cursor.next === item){
+        return cursor
+      }
+      cursor = cursor.next
+    }
+    throw 'Not Found'
+  }
+  nextItem(item){
+    return item.next
+  }
   getAllData(){
     let result = []
     let cursor = this._head
@@ -69,6 +85,44 @@ class Link {
   }
 }
 
+class DuLink extends Link {
+  constructor() {
+    super()
+  }
+  push(data){
+    this.length++
+    this._tail.data = data
+    let lnode = new LNode()
+    lnode.prior = this._tail
+    this._tail.next = lnode
+    this._tail = lnode
+  }
+  insert(offset,data){
+    if(this.length <= offset) {throw new Error('can not insert in tail')}
+    this.length++
+    let next,item
+    if(offset === 0){
+      next = this._head
+      this._head = new LNode(data)
+      this._head.next = next
+      next.prior = this._head
+    } else {
+      item = this._head
+      for(let i = 1;i < offset;i++){
+        item = item.next
+      }
+      next = item.next
+      item.next = new LNode(data)
+      item.next.next = next
+      item.next.prior = item
+    }
+  }
+  priorItem(item){
+    return item.prior
+  }
+}
+
 module.exports = {
-  Link
+  Link,
+  DuLink
 }
