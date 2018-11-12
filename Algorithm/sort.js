@@ -28,7 +28,21 @@ function optimizeBubbleSort(originArray){
   return array
 }
 
+function selectSort(originArray){
+  let array = new Array(...originArray)
+  for(let i=0;i<array.length;i++){
+    let min = i
+    for(let j=i;j<array.length;j++){
+      min = array[min]<array[j]?min:j
+    }
+    [array[i],array[min]] = [array[min],array[i]];
+    console.log(`第${i+1}趟排序 => [${array}]`)
+  }
+  return array
+}
+
 module.exports = {
   bubbleSort,
-  optimizeBubbleSort
+  optimizeBubbleSort,
+  selectSort
 }

@@ -101,3 +101,10 @@ const {optimizeBubbleSort} = require('./Algorithm/sort.js')
 console.log(`origin aray => [${[6,2,5,4,3,2,1]}]`)
 console.log(`排序结果 => [${optimizeBubbleSort([6,2,5,4,3,2,1])}]`)
 console.log()
+
+//选择排序
+console.log('选择排序')
+const {selectSort} = require('./Algorithm/sort.js')
+console.log(`origin aray => [${[6,2,5,4,3,2,1]}]`)
+console.log(`排序结果 => [${selectSort([6,2,5,4,3,2,1])}]`)
+console.log()
